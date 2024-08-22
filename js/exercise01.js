@@ -6,7 +6,23 @@
 */
 
 // Fase di preparazione
-// Fase di gestione eventi
+
+// Creo la funzione
+function isPalindrome(word) {
+    // Creo una variabile per salvare la parola invertita
+    const reverseWord = word.split("").reverse().join("");
+    // Controllo se la parola inserita e la stessa invertita coincidono
+    const result = word === reverseWord ? true : false;
+    return result;
+}
+
 // Fase di raccolta dati
-// Fase di elaborazione
+
+// Recupero la parola tramite prompt
+const word = prompt("Parola:");
+console.log("const word =", word, "type:", typeof word);
+
 // Fase di produzione
+
+// Stampo il risultato
+console.log(isPalindrome(word));
