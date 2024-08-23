@@ -9,7 +9,43 @@
 */
 
 // Fase di preparazione
-// Fase di gestione eventi
+
+// Creo una funzione per generare un numero random da 1 a 5
+function getRandomNumber() {
+    const randomNumber = Math.floor(Math.random() * 5) + 1;
+    return randomNumber;
+}
+
+// Creo una funzione per capire se un numero è pari o dispari
+function checkEvenOrOdd(number) {
+    const result = number % 2 === 0 ? "pari" : "dispari";
+    return result;
+}
+
 // Fase di raccolta dati
-// Fase di elaborazione
-// Fase di produzione
+
+// Recupero la scelta tra pari e dispari tramite prompt
+const userChoice = prompt("Pari o Dispari:");
+console.log("const userChoice =", userChoice, "type:", typeof userChoice);
+
+// Recupero il numero scelto da 1 a 5 tramite prompt
+const userNumber = parseInt(prompt("Numero (da 1 a 5):"));
+console.log("const userNumber =", userNumber, "type:", typeof userNumber);
+
+// Recupero il numero da 1 a 5 generato tramite funzione
+const computerNumber = getRandomNumber();
+console.log("const computerNumber =", computerNumber, "type:", typeof computerNumber);
+
+// Fase di elaborazione e di produzione
+
+// Sommo i due numeri
+const sum = userNumber + computerNumber;
+console.log("const sum =", sum, "type:", typeof sum);
+
+// Utilizzo la funzione per controllare se la somma dei due numeri è pari o dispari
+const result = checkEvenOrOdd(sum);
+console.log("const result =", result, "type:", typeof result);
+
+// Controllo e stampo il vincitore
+const message = userChoice === result ? "L'utente ha vinto." : "Il computer ha vinto.";
+console.log(message);
