@@ -10,13 +10,15 @@
 
 // Fase di preparazione
 
+// Funzioni
+
 // Creo una funzione per generare un numero random da 1 a 5
 function getRandomNumber() {
     const randomNumber = Math.floor(Math.random() * 5) + 1;
     return randomNumber;
 }
 
-// Creo una funzione per capire se un numero è pari o dispari
+// Creo una funzione per determinare se un numero è pari o dispari
 function checkEvenOrOdd(number) {
     const result = number % 2 === 0 ? "pari" : "dispari";
     return result;
