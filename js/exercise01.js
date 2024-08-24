@@ -9,10 +9,12 @@
 
 // Creo la funzione
 function isPalindrome(word) {
+    // Fase di pulizia dati
+    word = word.trim().toLowerCase();
     // Creo una variabile per salvare la parola invertita
-    const reverseWord = word.split("").reverse().join("");
+    const reversedWord = word.split("").reverse().join("");
     // Controllo se la parola inserita e la stessa invertita coincidono
-    const result = word === reverseWord ? true : false;
+    const result = word === reversedWord;
     return result;
 }
 
